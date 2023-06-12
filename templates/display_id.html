@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Checkout</title>
+     <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="/static/images/favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+</head>
+<body id="top">
+  <a href="index.html"> </a>
+
+  <!-- 
+  - #HEADER
+-->
+
+  <header class="header" data-header>
+      <div class="container">
+
+          <h1>
+              <a href="{{ url_for('index') }}" class="logo" style="color: orange;">The Grill<span class="span">.</span></a>
+          </h1>
+
+          <nav class="navbar" data-navbar>
+              <ul class="navbar-list">
+
+                  <li class="nav-item">
+                      <a href="{{ url_for('index') }}" class="navbar-link" data-nav-link style="color: orange; font-size: 20px;">Home</a>
+                  </li>
+
+                 
+
+              </ul>
+          </nav>
+
+          
+  </header>
+  <main>
+    <article>
+
+        <!-- 
+    - #HERO
+  -->
+
+        <section class="hero" id="home"
+            style="background-image: url('./static/images/29014083_7466890.jpg')">
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <p  class="h2 section-title">Item Selected: {{ item }}</p>
+
+                    <h2 class="h1 hero-title" style="color: orange;">Price: {{ price }}</h2>
+
+                    <p class="hero-text" style="color: black;">Don’t starve; just order.</p>
+
+                    
+                    <button type="button" class="btn btn-primary" ><a href="{{ url_for('checkout') }}">Checkout</a></button>
+                    
+                </div>
+
+
+            </div>
+        </section>
+
+</body>
+</html>

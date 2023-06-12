@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Reserved</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 
+        - favicon
+    -->
+    <link rel="shortcut icon" href="./static/images/favicon.svg" type="image/svg+xml">
+
+    <!-- 
+        - custom css link
+    -->
+    <link rel="stylesheet" href="./static/style.css">
+
+    <!-- 
+        - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <!-- 
+        - #HEADER
+      -->
+
+    <header class="header" data-header>
+        <div class="container">
+
+            <h1>
+                <a href="{{ url_for('index') }}" class="logo" style="color: orange;font-size: 25px;">The Grill<span class="span">.</span></a>
+            </h1>
+
+            <nav class="navbar" data-navbar>
+                <ul class="navbar-list">
+
+                    <li class="nav-item">
+                        <a href="{{ url_for('index') }}" class="navbar-link" data-nav-link style="color: orange; font-size: 20px;">Home</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="header-btn-group">
+                <button class="search-btn" aria-label="Search" data-search-btn>
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+
+                <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+
+    <main>
+        <article>
+
+            <!-- 
+            - #HERO
+          -->
+
+            <section class="hero" id="home"
+                style="background-image: url('./static/images/8966900_4034081-01.jpeg.jpg')">
+                <div class="container">
+
+                    <div class="hero-content">
+
+                        <div class="about-content">
+
+                            <h2 class="h2 section-title">
+                                The Table has </br>been booked.</br>
+                                <span class="span">Yeah!</span>
+                            </h2>
+
+
+
+                        </div>
+
+
+                    </div>
+            </section>
+
+</html>

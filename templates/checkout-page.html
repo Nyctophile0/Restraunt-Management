@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grill - Supper delicious Burger in town!</title>
+
+    
+
+    <!-- 
+    - favicon
+  -->
+    <link rel="shortcut icon" href="/static/images/favicon.svg" type="image/svg+xml">
+
+    <!-- 
+    - custom css link
+  -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- 
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+
+
+</head>
+<body id="top">
+
+  <!-- 
+      - #HEADER
+    -->
+
+  <header class="header" data-header>
+      <div class="container">
+
+          <h1>
+              <a href="{{ url_for('index') }}" class="logo" style="color: orange;font-size: 25px;">The Grill<span class="span">.</span></a>
+          </h1>
+
+          <nav class="navbar" data-navbar>
+              <ul class="navbar-list">
+
+                  <li class="nav-item">
+                      <a href="{{ url_for('index') }}" class="navbar-link" data-nav-link style="color: orange; font-size: 20px;">Home</a>
+                  </li>
+
+              </ul>
+          </nav>
+
+          <div class="header-btn-group">
+              <button class="search-btn" aria-label="Search" data-search-btn>
+                  <ion-icon name="search-outline"></ion-icon>
+              </button>
+
+              <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+                  <span class="line top"></span>
+                  <span class="line middle"></span>
+                  <span class="line bottom"></span>
+              </button>
+          </div>
+
+      </div>
+  </header>
+
+  
+<section class="section section-divider gray order" id="order">
+    <div class="container">
+  <form class="checkout-form" method="post" action="/submit">
+
+      <p class="footer-list-title">Checkout</p>
+
+      <div class="input-wrapper">
+
+          <input type="text" name="full_name" required placeholder="Your Name" aria-label="Your Name"
+      class="input-field">
+
+          <input type="email" name="email_address" required placeholder="Email" aria-label="Email"
+      class="input-field">
+
+      </div>
+
+      <div class="input-wrapper">
+
+          <select name="payment_option" aria-label="Payment Option" class="input-field">
+            <option value="payment">Payment Option</option>
+      <option value="COD">COD</option>
+      <option value="Debit Card">Debit Card</option>
+      <option value="Credit Card">Credit Card</option>
+      <option value="UPI">UPI</option>
+  </select>
+
+  <input type="tel" name="telephone_number" required placeholder="Telephone Number" aria-label="Telephone Number"
+  class="input-field">
+      </div>
+
+      <textarea name="address" required placeholder="Address" aria-label="Address"
+  class="input-field"></textarea>
+
+      <button type="submit" class="btn" onclick="showMessage()">Proceed to Pay</button>
+
+  </form>
+</div>
+</section>
+
+</div>
+</div>
